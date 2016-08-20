@@ -1,0 +1,267 @@
+@charset "utf-8";
+/* CSS 初始化 */
+body,div,p,h1,h2,h3,h4,ul,li,ol,form,table,tr,td,dl,dd,dt,span,label,input,select,option,a,img,i,b,strong,em{ margin:0; padding:0;}
+li{ list-style:none;}
+img{ border:0 none; vertical-align: top;}
+a{ text-decoration:none;}
+a:hover{ }
+input{ border:0;}
+textarea{ border:0;}
+html{ font-size:625%;/*rem单位永远以html为参考缩放，而em和%以父元素做参考；16*6.25=100px；*/}
+body {
+    font-family: "微软雅黑";
+    color: #fff;
+    max-width: 750px;/*效果图的宽度*/
+    min-width: 320px;
+    margin: 0 auto;
+    font-size: 0.36rem;/*body中默认使用做多的字体大小*/
+	width:100%;
+	height:100%;
+	background:#ffe63b url(../images/bg.gif) no-repeat top center; background-size:100% 4.5rem;
+	height:100vh;
+}
+.clearfix{ *zooom:1;}
+.clearfix:after{ content:'.'; clear:both; display: block; visibility:hidden; height:0;}
+/**/
+#main{ width:5.66rem; height:7.5rem; text-align:center; position:relative; margin:5.03rem auto 0;}
+#glass{ width:5.15rem; height:5.15rem; position:absolute; top:0.1rem; left:0.21rem; z-index:2;}
+.img1{ display:block; width:5.15rem; height:5.15rem;}
+.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10{ width:1.03rem; height:1.03rem; position:absolute;}
+.img2{ bottom:1rem; right:1.38rem; }
+.img3{ bottom:0.38rem; right:1.24rem;}
+.img4{ bottom:0.89rem; right:0.62rem;}
+.img5{ bottom:1.59rem; right:0.35rem;}
+.img6{ bottom:0.36rem; left:1.34rem;}
+.img7{ bottom:0.25rem; left:2.04rem;}
+.img8{ bottom:0.94rem; left:1.58rem;}
+.img9{ bottom:0.85rem; left:0.68rem;}
+.img10{ bottom:1.41rem; left:1.35rem;}
+.machine{ width:5.15rem; height:3.11rem; position:absolute; bottom:0; left:0.21rem; z-index:1;}
+.li1{ width:5.15rem; height:3.11rem; position:absolute; top:0; left:0; z-index: 2;}
+.li1 img{ width:100%;}
+.li2{ width:1.35rem; height:1.08rem; position:absolute; bottom:0.76rem; left:1.14rem; z-index: 5; }
+.li2 img{ width:100%;}
+.li3{ width:1.35rem; height:0.74rem; position:absolute; bottom:0.04rem; left:1.14rem;  z-index: 3;}
+.li3 img{ width:100%;}
+.btn{ width:1.65rem; height:1.65rem; position:absolute; bottom:0.5rem; right:1.06rem; background:url(../images/btn-bg.png) no-repeat; background-size:100% 100%;  z-index: 6;}
+/*结果展示*/
+.result{ width: 5.66rem; height: 7.5rem;position: relative;}
+.result li{ width: 1.03rem; height: 1.03rem; position: absolute;bottom: 0.2rem; left: 1.54rem;  }
+.result li img{ width: 100%; }
+/*小球滚动*/
+@keyframes roll
+{
+    0%	{ bottom:1rem; right:1.38rem;}
+    30% { bottom:1.2rem; right:1.38rem;}
+    80% { bottom:1.25rem; right:1.38rem;}
+    100% { bottom:1.2rem; right:1.38rem;}
+}	
+@-webkit-keyframes roll /* Safari and Chrome */
+{
+    0%	{ bottom:1rem; right:1.38rem;}
+    30% { bottom:1.2rem; right:1.38rem;}
+    80% { bottom:1.25rem; right:1.38rem;}
+    100% { bottom:1.2rem; right:1.38rem;}
+}
+@-o-keyframes roll /* Opera */
+{
+    0%	{ bottom:1rem; right:1.38rem;}
+    30% { bottom:1.2rem; right:1.38rem;}
+    80% { bottom:1.25rem; right:1.38rem;}
+    100% { bottom:1.2rem; right:1.38rem;}
+}
+@keyframes roll1
+{
+    0%	{ bottom:0.38rem; right:1.24rem;;}
+    50% { bottom:0.45rem;  right:1.24rem;}
+    100% { bottom:0.38rem;; right:1.24rem;}
+}
+@-webkit-keyframes roll1 /* Safari and Chrome */
+{
+    0%	{ bottom:0.38rem; right:1.24rem;;}
+    50% { bottom:0.45rem;  right:1.24rem;}
+    100% { bottom:0.38rem;; right:1.24rem;}
+}
+@-o-keyframes roll1 /* Opera */
+{
+    0%	{ bottom:0.38rem; right:1.24rem;;}
+    50% { bottom:0.45rem;  right:1.24rem;}
+    100% { bottom:0.38rem; right:1.24rem;}
+}
+@keyframes roll2
+{
+    0%	{ bottom:0.89rem; right:0.62rem;}
+    60% { bottom:1.09rem; right:0.62rem;}
+    100% { bottom:0.89rem; right:0.62rem;}
+}
+@-webkit-keyframes roll2 /* Safari and Chrome */
+{
+    0%	{ bottom:0.89rem; right:0.62rem;}
+    60% { bottom:1.09rem; right:0.62rem;}
+    100% { bottom:0.89rem; right:0.62rem;}
+}
+@-o-keyframes roll2 /* Opera */
+{
+    0%	{ bottom:0.89rem; right:0.62rem;}
+    60% { bottom:1.09rem; right:0.62rem;}
+    100% { bottom:0.89rem; right:0.62rem;}}
+@keyframes roll3
+ {
+     0%	{ bottom:1.59rem; right:0.35rem;}
+     50% { bottom:1.8rem; right:0.35rem;}
+     100% { bottom:1.6rem; right:0.35rem;}
+ }
+@-webkit-keyframes roll3 /* Safari and Chrome */
+{
+    0%	{ bottom:1.59rem; right:0.35rem;}
+    50% { bottom:1.8rem;; right:0.35rem;}
+    100% { bottom:1.6rem;; right:0.35rem;}
+}
+@-o-keyframes roll3 /* Opera */
+{
+    0%	{ bottom:1.59rem; right:0.35rem;}
+    50% { bottom:1.8rem; right:0.35rem;}
+    100% { bottom:1.6rem; right:0.35rem;}
+}
+@keyframes roll4
+ {
+     0%	{ bottom:0.36rem; left:1.34rem;}
+     50% { bottom:0.6rem;; left:1.34rem;}
+     100% { bottom:0.4rem;; left:1.35rem;}
+ }
+@-webkit-keyframes roll4 /* Safari and Chrome */
+{
+    0%	{ bottom:0.36rem; left:1.34rem;}
+    50% { bottom:0.6rem;; left:1.34rem;}
+    100% { bottom:0.4rem;; left:1.35rem;}
+}
+@-o-keyframes roll4 /* Opera */
+{
+    0%	{ bottom:0.36rem; left:1.34rem;}
+    50% { bottom:0.6rem;; left:1.34rem;}
+    100% { bottom:0.4rem;; left:1.35rem;}
+}
+@keyframes roll5
+ {
+     0%	{ bottom:0.25rem; left:2.04rem}
+     50% { bottom:0.6rem; left:2.04rem;}
+     100% { bottom:0.3rem;left:2.04rem;}
+ }
+@-webkit-keyframes roll5 /* Safari and Chrome */
+{
+    0%	{ bottom:0.25rem; left:2.04rem}
+    50% { bottom:0.6rem; left:2.04rem;}
+    100% { bottom:0.3rem;left:2.04rem;}
+}
+@-o-keyframes roll5 /* Opera */
+{
+    0%	{ bottom:0.25rem; left:2.04rem}
+    50% { bottom:0.6rem; left:2.04rem;}
+    100% { bottom:0.3rem;left:2.04rem;}
+}@keyframes roll6
+ {
+     0%	{ bottom:0.94rem; left:1.58rem;}
+     50% { bottom:1.2rem;;left:1.58rem;;}
+     100% { bottom:0.94rem;; left:1.58rem;;}
+ }
+@-webkit-keyframes roll6 /* Safari and Chrome */
+{
+    0%	{ bottom:0.94rem; left:1.58rem;}
+    50% { bottom:1.2rem;left:1.58rem;}
+    100% { bottom:0.94rem; left:1.58rem;}
+}
+@-o-keyframes roll6 /* Opera */
+{
+    0%	{ bottom:0.94rem; left:1.58rem;}
+    50% { bottom:1.2rem;left:1.58rem;}
+    100% { bottom:0.94rem;left:1.58rem;}
+}@keyframes roll7
+ {
+     0%	{ bottom:0.85rem; left:0.68rem;}
+     50% { bottom:1.30rem;; left:0.68rem;}
+     100% { bottom:0.85rem;; left:0.68rem;}
+ }
+@-webkit-keyframes roll7 /* Safari and Chrome */
+{
+    0%	{ bottom:0.85rem; left:0.68rem;}
+    50% { bottom:1.30rem;; left:0.68rem;}
+    100% { bottom:0.85rem;; left:0.68rem;}
+}
+@-o-keyframes roll7 /* Opera */
+{
+    0%	{ bottom:0.85rem; left:0.68rem;}
+    50% { bottom:1.30rem;; left:0.68rem;}
+    100% { bottom:0.85rem;; left:0.68rem;}
+}@keyframes roll8
+ {
+     0%	{ bottom:1.41rem; left:1.35rem;}
+     50% { bottom:1.67rem;; left:1.35rem;}
+     100% { bottom:1.41rem;; left:1.35rem;}
+ }
+@-webkit-keyframes roll8 /* Safari and Chrome */
+{
+    0%	{ bottom:1.41rem; left:1.35rem;}
+    50% { bottom:1.67rem;; left:1.35rem;}
+    100% { bottom:1.41rem;; left:1.35rem;}
+}
+@-o-keyframes roll8 /* Opera */
+{
+    0%	{ bottom:1.41rem; left:1.35rem;}
+    50% { bottom:1.67rem;; left:1.35rem;}
+    100% { bottom:1.41rem;; left:1.35rem;}
+}
+
+/*旋转*/
+@keyframes rotate
+{
+	from{transform:rotate(0deg);
+    -ms-transform:rotate(0deg); /* Internet Explorer */
+    -moz-transform:rotate(0deg); /* Firefox */
+    -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+    -o-transform:rotate(0deg); /* Opera */}
+	to{ transform:rotate(360deg);
+    -ms-transform:rotate(360deg); /* Internet Explorer */
+    -moz-transform:rotate(360deg); /* Firefox */
+    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+    -o-transform:rotate(360deg); /* Opera */}
+}
+@-webkit-keyframes rotate
+{
+	from{transform:rotate(0deg);
+    -ms-transform:rotate(0deg); /* Internet Explorer */
+    -moz-transform:rotate(0deg); /* Firefox */
+    -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+    -o-transform:rotate(0deg); /* Opera */}
+	to{ transform:rotate(360deg);
+    -ms-transform:rotate(360deg); /* Internet Explorer */
+    -moz-transform:rotate(360deg); /* Firefox */
+    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+    -o-transform:rotate(360deg); /* Opera */}
+}
+@-o-keyframes rotate /* Opera */
+{
+	from{transform:rotate(0deg);
+    -ms-transform:rotate(0deg); /* Internet Explorer */
+    -moz-transform:rotate(0deg); /* Firefox */
+    -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+    -o-transform:rotate(0deg); /* Opera */}
+	to{ transform:rotate(360deg);
+    -ms-transform:rotate(360deg); /* Internet Explorer */
+    -moz-transform:rotate(360deg); /* Firefox */
+    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+    -o-transform:rotate(360deg); /* Opera */}
+}
+.roll{ -webkit-animation: roll 1s ease infinite 0.5s; }
+.roll1 {-webkit-animation: roll1 1s ease infinite 0.5s;}
+.roll2{ -webkit-animation: roll2 1s ease infinite 0.5s;}
+.roll3{ -webkit-animation: roll3 1s ease infinite 0.5s;}
+.roll4{ -webkit-animation: roll4 1s ease infinite 0.5s;}
+.roll5{ -webkit-animation: roll5 1s ease infinite 0.5s;}
+.roll6{ -webkit-animation: roll6 1s ease infinite 0.5s;}
+.roll7{ -webkit-animation: roll7 1s ease infinite 0.5s;}
+.roll8{ -webkit-animation: roll8 1s ease infinite 0.5s;}
+
+.rotate{ -webkit-animation: rotate 1s ease infinite; }
+
+	
+	
